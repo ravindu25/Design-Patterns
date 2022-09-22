@@ -1,8 +1,11 @@
 public abstract class Shape {
-    protected DrawAPI drawAPI;
-    
-    protected Shape(DrawAPI drawAPI){
-       this.drawAPI = drawAPI;
-    }
-    public abstract void draw();	
- }
+	//Composition - implementor
+	protected Color color;
+	
+	//constructor with implementor as input argument
+	public Shape(Color c){
+		this.color=c;
+	}
+	
+	abstract public void applyColor();
+}
